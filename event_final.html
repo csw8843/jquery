@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자 확대 축소 버튼 만들기</title>
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- 
+    글자 확대 축소 버튼 만들기
+    ===========================
+    1.글자 크기는 14px 에서 시작해 -버튼을 누르면 1px씩 감소하고 +버튼을 누르면 1px씩
+    증가함. (최소 8px ~ 최대 20px)
+    2.100% 버튼을 누르면 다시 14px로 돌아오게 만들기
+    3.글자 크기에 맞워 본문의 글자크기도 바뀌어야 함. 
+   -->
+    <p class="btnBox">
+      <button class="zoomOut">-</button>
+      <button class="originBtn">100%</button>
+      <button class="zoomIn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="wrap">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime
+      accusantium ea voluptate minus, eaque veritatis expedita corrupti error,
+      dignissimos eos aliquid id voluptates. Accusantium minima aperiam commodi
+      quia dolorum?
+    </div>
+
+    <script>
+      $(function () {
+        var baseFont = 14;
+
+        $(".btnBox button").on("click", zoomInOut);
+      });
+    </script>
+  </body>
+</html>
