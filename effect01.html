@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>효과 메서드</title>
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsa
+      doloremque! Consectetur debitis quasi ipsam, optio provident est ea
+      voluptas tempore, quos molestiae libero adipisci, dignissimos eius odit
+      eligendi enim!
+    </div>
+
+    <script>
+      $(function () {
+        $("#box").slideUp(1000, "swing", function () {
+          alert("hello");
+        });
+      });
+    </script>
+  </body>
+</html>

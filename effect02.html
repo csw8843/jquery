@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      <button class="btn1">up</button>
+      <button class="btn2">fade</button>
+    </p>
+    <button class="btn3">toggle</button>
+    <p>
+      <button class="btn4">0.3</button>
+      <button class="btn5">1</button>
+    </p>
+
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odit
+      perferendis, cupiditate velit consequatur quod pariatur aliquam quibusdam
+      harum illo aliquid ipsa quisquam quasi illum animi, similique voluptatem
+      aperiam. Possimus.
+    </div>
+    <script>
+      $(function () {
+        $(".btn2").hide();
+
+        $(".btn1").on("click", function () {
+          $(".box").slideUp(1000, "linear", function () {
+            $(".btn1").hide();
+            $(".btn2").show();
+          });
+        });
+
+        $(".btn2").on("click", function () {
+          $(".box").fadeIn(1000, "swing", function () {
+            $("btn2").hide();
+            $("btn1").show();
+          });
+        });
+
+        $(".btn3").on("click", function () {
+          $(".box").slideToggle(1000, "linear");
+        });
+
+        $(".btn4").on("click", function () {
+          $(".box").fadeTo("fast", 0.3);
+        });
+
+        $(".btn5").on("click", function () {
+          $(".box").fadeTo("normal", 1);
+        });
+      });
+    </script>
+  </body>
+</html>
