@@ -30,11 +30,49 @@
     </div>
 
     <script>
-      $(function () {
+
+      /*
+       $(function () {
         var baseFont = 14;
 
+        //.btnBox의 button을 클릭하면 zoomInOut함수 실행
         $(".btnBox button").on("click", zoomInOut);
+
+        //zoomInOut함수
+
+
       });
+      */
+      // $(function () {
+      //   var baseFont = 14;
+      //   var minFont = 8;
+      //   var maxFont = 20;
+      //   var $wrap = $("#wrap");
+      //   var $btnBox = $(".btnBox");
+
+      //   function zoomInOut(event) {
+      //     var $target = $(event.target);
+      //     var currentFont = parseInt($wrap.css("font-size"));
+      //     var newFont = currentFont;
+
+      //     if ($target.hasClass("zoomIn") && currentFont < maxFont) {
+      //       newFont = currentFont + 1;
+      //     } else if ($target.hasClass("zoomOut") && currentFont > minFont) {
+      //       newFont = currentFont - 1;
+      //     } else if ($target.hasClass("originBtn")) {
+      //       newFont = baseFont;
+      //     }
+
+      //     if (newFont !== currentFont) {
+      //       $wrap.css("font-size", newFont + "px");
+      //       $(".fontSize").text(newFont + "px");
+      //     }
+      //   }
+
+      //   $(".btnBox button").on("click", zoomInOut);
+      // });
+
+      $(function () {
     </script>
   </body>
 </html>
